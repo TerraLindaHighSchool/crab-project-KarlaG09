@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Ocean here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Karla Gonzalez
+ * @version 9/13/21
  */
 public class Ocean extends World
 {

@@ -20,4 +20,5 @@ public class Land extends Actor
         setImage(landImage);
   
     }
+   
 }
