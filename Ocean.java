@@ -60,5 +60,7 @@ public class Ocean extends World
         ball5.setLocation(402,324);
         ball2.setLocation(525,167);
         ball.setLocation(266,44);
+        Vet vet = new Vet();
+        addObject(vet,300,318);
     }
 }
