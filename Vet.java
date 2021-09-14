@@ -17,5 +17,6 @@ public class Vet extends Actor
     {
         vetImage.scale(60, 60);
         setImage(vetImage);
+        setLocation(10, 40);
     }
 }

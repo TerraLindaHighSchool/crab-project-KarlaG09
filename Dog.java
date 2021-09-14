@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Dog extends Actor
 {
     GreenfootImage dogImage = getImage();
-    
+    private int numOfBall = 8;
     /**
      * Act - do whatever the Dog wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -19,7 +19,6 @@ public class Dog extends Actor
         dogImage.scale(50, 50);
         setImage(dogImage);
     }
-     private int numOfBalls= 8;
     
    public void act()  
    {
@@ -50,35 +49,31 @@ public class Dog extends Actor
      {
          turn(-4);
      }
-     
      }
 
-   private void onCollision () 
+    private void onCollision () 
    {
-       
     if(isTouching(Ball.class))
-     {
+    {
         removeTouching(Ball.class);
         Greenfoot.playSound("slurp.wav");
-        numOfBalls--;
-        System.out.println("Number of balls" + numOfBalls);
-    
-         //Winning The Game
-         if (numOfBalls == 0)
-         {
-             Greenfoot.setWorld(new WinSplash());
-             Greenfoot.playSound("fanfare.wav");
-             Greenfoot.stop();
-            }
-            // 
-    }
-    
-     if (isTouching(Dog.class))
-     {
-    
-        removeTouching(Ball.class);
-        Greenfoot.playSound("au.wav");
+        numOfBall--;
+        //Winning The Game
+        if (numOfBall == 0)
+        
+        {
+        Greenfoot.setWorld(new WinSplash());
+        Greenfoot.playSound("fanfare.wav");
         Greenfoot.stop();
+        } 
+    } 
+    
+    if(isTouching(Vet.class))
+        {
+        //Losing the game
+        Greenfoot.setWorld(new LoseSplash());
+        Greenfoot.playSound("au.wav");
+        Greenfoot.stop( );
+        }
     }
-   }
 }

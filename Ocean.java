@@ -15,8 +15,8 @@ public class Ocean extends World
      */
     public Ocean()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 600,1); 
+        // Create a new world with 560 x 560 cells with a cell size of 1x1 pixels.
+        super(560, 560,1); 
         prepare();
     }
     
@@ -29,16 +29,9 @@ public class Ocean extends World
         Dog dog = new Dog();
         addObject(dog,288,272);
         dog.setLocation(275,296);
-        Land land = new Land();
-        addObject(land,275,296);
-        land.setLocation(22,309);
-        land.setLocation(46,276);
-        land.setLocation(117,272);
         dog.setLocation(336,296);
         dog.setLocation(351,242);
-        land.setLocation(77,193);
         dog.setLocation(308,233);
-        land.setLocation(76,302);
         Ball ball = new Ball();
         addObject(ball,331,109);
         ball.setLocation(345,107);
@@ -62,5 +55,8 @@ public class Ocean extends World
         ball.setLocation(266,44);
         Vet vet = new Vet();
         addObject(vet,300,318);
+        Ball ball8 = new Ball();
+        addObject(ball8,224,127);
+        vet.setLocation(91,288);
     }
 }
